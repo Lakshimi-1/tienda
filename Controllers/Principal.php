@@ -24,11 +24,28 @@ class Principal extends Controller
     }
     //vista detail
     public function detail($id_producto)
-    {
-        $data['producto'] = $this->model->getProducto($id_producto);
+{
+    // Obtener los datos del producto
+    $productos = $this->model->getProducto($id_producto);
+
+    // Verificar si se encontró el producto
+    if (!empty($productos)) {
+        // Obtener el primer producto del conjunto de resultados
+        $data['producto'] = $productos[0];
         $data['title'] = $data['producto']['nombre'];
-        $this->views->getView('principal', "detail", $data);
+    } else {
+        // Producto no encontrado, establecer datos predeterminados o mostrar un error
+        $data['producto'] = [
+            'nombre' => 'Producto no encontrado',
+            // Otros campos del producto
+        ];
+        $data['title'] = 'Producto no encontrado';
     }
+
+    // Cargar la vista
+    $this->views->getView('principal', "detail", $data);
+}
+
     //vista contactos
     public function contactos()
     {
