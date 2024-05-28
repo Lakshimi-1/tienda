@@ -16,10 +16,13 @@ class Principal extends Controller
         $this->views->getView('principal', "about", $data);
     }
     //vista shop
-    public function shop()
+    public function shop($page)
     {
+        $pagina = (empty($page)) ? 1 : $page ;
+        $porPagina = 20;
+        $desde = ($pagina - 1) * $porPagina;
         $data['title'] = 'Nuestros Productos';
-        $data['productos'] = $this->model->getProductos();
+        $data['productos'] = $this->model->getProductos($desde, $porPagina);
         $this->views->getView('principal', "shop", $data);
     }
     //vista detail

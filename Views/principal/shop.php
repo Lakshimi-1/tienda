@@ -1,7 +1,4 @@
-<?php include_once 'Views/template-principal/header.php';
-
-print_r($data['productos']);
-?>
+<?php include_once 'Views/template-principal/header.php';?>
 
 
 
@@ -73,10 +70,11 @@ print_r($data['productos']);
                     </div>
                 </div>
                 <div class="row">
+                    <?php foreach ($data['productos'] as $producto) { ?>
                     <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
-                                <img class="card-img rounded-0 img-fluid" src="<?php echo BASE_URL ;?>assets/img/shop_01.jpg">
+                                <img class="card-img rounded-0 img-fluid" src="<?php echo $producto['imagen']; ?>">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
@@ -86,7 +84,7 @@ print_r($data['productos']);
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="detail.php" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a href="detail.php" class="h3 text-decoration-none"><?php echo $producto['nombre']; ?></a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>M/L/X/XL</li>
                                     <li class="pt-2">
@@ -106,10 +104,11 @@ print_r($data['productos']);
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">$250.00</p>
+                                <p class="text-center mb-0"><?php echo MONEDA . '' . $producto['precio']; ?></p>
                             </div>
                         </div>
                     </div>
+                    <?php } ?>
                 </div>
                 <div div="row">
                     <ul class="pagination pagination-lg justify-content-end">
