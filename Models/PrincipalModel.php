@@ -9,7 +9,7 @@ class PrincipalModel extends Query{
     public function getProducto($id_producto)
     {
         $sql = "SELECT p.*, c.categoria FROM productos p INNER JOIN categorias c ON p.id_categoria = c.id WHERE p.id = $id_producto";
-        return $this->selectAll($sql);
+        return $this->select($sql);
     }
     public function getProductos() {
         $sql = "SELECT * FROM productos";
