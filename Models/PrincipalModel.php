@@ -15,6 +15,11 @@ class PrincipalModel extends Query{
         $sql = "SELECT * FROM productos LIMIT $desde, $porPagina";
         return $this->selectAll($sql);
     }
+    //obtener total productos
+    public function getTotalProductos() {
+        $sql = "SELECT COUNT(*) AS total FROM productos ";
+        return $this->select($sql);
+    }
 }
  
 ?>

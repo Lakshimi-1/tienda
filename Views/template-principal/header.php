@@ -86,7 +86,7 @@ https://templatemo.com/tm-559-zay-shop
                             <a class="nav-link" href="<?php echo BASE_URL . 'principal/about' ?>">Servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo BASE_URL . 'principal/shop' ?>">Tienda</a>
+                            <a class="nav-link" href="<?php echo BASE_URL . 'principal/shop/1' ?>">Tienda</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo BASE_URL . 'principal/contactos' ?>">Contactos</a>
