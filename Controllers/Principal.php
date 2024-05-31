@@ -29,14 +29,19 @@ class Principal extends Controller
         $this->views->getView('principal', "shop", $data);
     }
     //vista detail
-    //vista detail
     public function detail($id_producto)
     {
         $data['producto'] = $this->model->getProducto($id_producto);
         $data['title'] = $data['producto']['nombre'];
         $this->views->getView('principal', "detail", $data);
     }
-
+    //vista categorias
+    public function categorias($id_categoria)
+    {
+        $data['productos'] = $this->model->getProductosCat($id_categoria);
+        $data['title'] = 'Categorias';
+        $this->views->getView('principal', "categorias", $data);
+    }
     //vista contactos
     public function contactos()
     {

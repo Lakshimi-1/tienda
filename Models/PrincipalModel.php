@@ -11,6 +11,7 @@ class PrincipalModel extends Query{
         $sql = "SELECT p.*, c.categoria FROM productos p INNER JOIN categorias c ON p.id_categoria = c.id WHERE p.id = $id_producto";
         return $this->select($sql);
     }
+    //paginacion
     public function getProductos($desde, $porPagina) {
         $sql = "SELECT * FROM productos LIMIT $desde, $porPagina";
         return $this->selectAll($sql);
@@ -19,6 +20,12 @@ class PrincipalModel extends Query{
     public function getTotalProductos() {
         $sql = "SELECT COUNT(*) AS total FROM productos ";
         return $this->select($sql);
+    }
+    //productos relacionados con la categoria
+    public function getProductosCat($id_categoria)
+    {
+        $sql = "SELECT * FROM productos  WHERE id_categoria = $id_categoria";
+        return $this->selectall($sql);
     }
 }
  
