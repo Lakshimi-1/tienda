@@ -25,8 +25,14 @@ class PrincipalModel extends Query{
     public function getProductosCat($id_categoria)
     {
         $sql = "SELECT * FROM productos  WHERE id_categoria = $id_categoria";
-        return $this->selectall($sql);
+        return $this->selectAll($sql);
     }
+    //obtener total productos relacionados con la categoria
+    public function getTotalProductosCat($id_categoria) {
+        $sql = "SELECT COUNT(*) AS total FROM productos WHERE id_categoria = $id_categoria";
+        return $this->select($sql);
+    }
+
 }
  
 ?>

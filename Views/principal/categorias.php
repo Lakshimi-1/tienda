@@ -49,13 +49,7 @@
                     <div class="col-md-6">
                         <ul class="list-inline shop-top-menu pb-3 pt-1">
                             <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none mr-3" href="#">All</a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none mr-3" href="#">Men's</a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none" href="#">Women's</a>
+                                <a class="h3 text-dark text-decoration-none mr-3" href="#">Productos</a>
                             </li>
                         </ul>
                     </div>
@@ -112,21 +106,6 @@
                 </div>
                 <div div="row">
                     <ul class="pagination pagination-lg justify-content-end">
-                        <?php 
-                        $anterior = $data['pagina'] - 1;
-                        $siguiente = $data['pagina'] + 1;
-                        if ($data['pagina'] > 1) {
-                            echo '<li class="page-item ">
-                            <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="'.$anterior.'">Anterior</a>
-                        </li>';
-                        }
-                        if ($data['total'] >= $siguiente) {
-                            echo '<li class="page-item">
-                            <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-white" href="'.$siguiente.'">Siguiente</a>
-                        </li>';
-                        }
-                        ?>
-                        
                         
                     </ul>
                 </div>
