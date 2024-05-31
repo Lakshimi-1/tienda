@@ -52,7 +52,7 @@ class Principal extends Controller
             }
         }
         $pagina = (empty($page)) ? 1 : $page ;
-        $porPagina = 20;
+        $porPagina = 15;
         $desde = ($pagina - 1) * $porPagina;
 
         $data['pagina'] = $pagina;
