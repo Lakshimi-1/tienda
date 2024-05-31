@@ -106,6 +106,22 @@
                 </div>
                 <div div="row">
                     <ul class="pagination pagination-lg justify-content-end">
+                        <?php 
+                        $anterior = $data['pagina'] - 1;
+                        $siguiente = $data['pagina'] + 1;
+                        $url = BASE_URL . 'principal/categorias/' . $data['id_categoria'];
+                        if ($data['pagina'] > 1) {
+                            echo '<li class="page-item ">
+                            <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="'. $url . '/' . $anterior .'">Anterior</a>
+                        </li>';
+                        }
+                        if ($data['total'] >= $siguiente) {
+                            echo '<li class="page-item">
+                            <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-white" href="'. $url . '/' . $siguiente .'">Siguiente</a>
+                        </li>';
+                        }
+                        ?>
+                        
                         
                     </ul>
                 </div>

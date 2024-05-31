@@ -61,6 +61,7 @@ class Principal extends Controller
 
         $data['productos'] = $this->model->getProductosCat($id_categoria, $desde, $porPagina);
         $data['title'] = 'Categorias';
+        $data['id_categoria'] = $id_categoria;
         $this->views->getView('principal', "categorias", $data);
     }
     //vista contactos
