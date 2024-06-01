@@ -32,6 +32,12 @@ class PrincipalModel extends Query{
         $sql = "SELECT COUNT(*) AS total FROM productos WHERE id_categoria = $id_categoria";
         return $this->select($sql);
     }
+    //productos relacionados aleatorios
+    public function getAleatorios($id_categoria)
+    {
+        $sql = "SELECT * FROM productos  WHERE id_categoria = $id_categoria ORDER BY RAND()  LIMIT 20";
+        return $this->selectAll($sql);
+    }
 
 }
  
