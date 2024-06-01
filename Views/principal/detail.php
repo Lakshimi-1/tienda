@@ -188,14 +188,14 @@
                             <img class="card-img rounded-0 img-fluid" src="<?php echo $relacion['imagen'];?>">
                             <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                 <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="shop-single.html"><i class="fas fa-heart"></i></a></li>
+                                    <li><a class="btn btn-success text-white" href="#"><i class="fas fa-heart"></i></a></li>
                                     <li><a class="btn btn-success text-white mt-2" href="<?php echo BASE_URL . 'principal/detail/' . $relacion['id']; ?>"><i class="fas fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                    <li><a class="btn btn-success text-white mt-2" href="#"><i class="fas fa-cart-plus"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="card-body">
-                            <a href="shop-single.html" class="h3 text-decoration-none"><?php echo $relacion['nombre'];?></a>
+                            <a href="<?php echo BASE_URL . 'principal/detail/' . $relacion['id']; ?>" class="h3 text-decoration-none"><?php echo $relacion['nombre'];?></a>
                             <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                 <li>M/L/X/XL</li>
                                 <li class="pt-2">
