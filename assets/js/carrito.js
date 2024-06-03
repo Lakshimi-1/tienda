@@ -2,6 +2,9 @@ const btnAddDeseo = document.querySelectorAll('.btnAddDeseo');
 const btnDeseo = document.querySelector('#btnCantidadDeseo');
 let listaDeseo = [];
 document.addEventListener('DOMContentLoaded',function () {
+    if (localStorage.getItem('listaDeseo') != null) {
+        listaDeseo = JSON.parse(localStorage.getItem('listaDeseo'));
+    }
     cantidadDeseo();
     for (let i = 0; i < btnAddDeseo.length; i++) {
         btnAddDeseo[i].addEventListener('click', function () {
@@ -11,6 +14,23 @@ document.addEventListener('DOMContentLoaded',function () {
     }
 })
 function agregarDeseo(idProducto) {
+    if (localStorage.getItem('listaDeseo') == null) {
+        listaDeseo = [];
+    } else {
+        let listaExiste = JSON.parse(localStorage.getItem('listaDeseo'));
+        for (let i = 0; i < listaExiste.length; i++) {
+            if (listaExiste[i]['idProducto'] == idProducto) {
+                Swal.fire({
+                    title: "Aviso?",
+                    text: "EL PRODUCTO YA ESTA EN TU LISTA DE DESEO",
+                    icon: "warning"
+                });
+                return;
+            }
+            
+        }
+        listaDeseo.concat(localStorage.getItem('listaDeseo'));
+    }
     listaDeseo.push({
         "idProducto" : idProducto,
         "cantidad" : 1
