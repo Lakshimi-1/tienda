@@ -16,6 +16,11 @@ function agregarDeseo(idProducto) {
         "cantidad" : 1
     })
     localStorage.setItem('listaDeseo', JSON.stringify(listaDeseo));
+    Swal.fire({
+        title: "Aviso?",
+        text: "PRODUCTO AGREGADO A LA LISTA DE DESEOS",
+        icon: "success"
+      });
     cantidadDeseo();
 }
 function cantidadDeseo() {
@@ -25,6 +30,5 @@ function cantidadDeseo() {
     } else {
         btnDeseo.textContent = 0;
     }
-    console.log(listas);
-    btnDeseo.textContent = listas.length;
+    
 }
