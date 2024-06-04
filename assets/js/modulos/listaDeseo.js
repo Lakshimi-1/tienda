@@ -13,11 +13,14 @@ function getListaDeseo() {
             let html = '';
             res.forEach(producto => {
                 html += `<tr>
-                <td>${producto.imagen}</td>
+                <td>
+                <img class="img-thumbnail rounded-circle" src="${producto.imagen}" alt="" width="100">
+                </td>
                 <td>${producto.nombre}</td>
                 <td>${producto.precio}</td>
                 <td>${producto.cantidad}</td>
-                <td><button class="btn btn-danger" type="button">Eliminar</button></td>
+                <td><button class="btn btn-danger" type="button"><i class="fas fa-trash"></i></button>
+                <button class="btn btn-info" type="button"><i class="fas fa-cart-plus"></i></button></td>
             </tr>`;
             });
             tablelista.innerHTML = html;

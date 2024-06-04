@@ -89,8 +89,8 @@ class Principal extends Controller
             $data['id'] = $result['id'];
             $data['nombre'] = $result['nombre'];
             $data['precio'] = $result['precio'];
-            $data['nombre'] = $result['nombre'];
-            $data['cantidad'] = $result['imagen'];
+            $data['cantidad'] = $result['cantidad'];
+            $data['imagen'] = $result['imagen'];
             array_push($array, $data);
         }
         echo json_encode($array, JSON_UNESCAPED_UNICODE);
