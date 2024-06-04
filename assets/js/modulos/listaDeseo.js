@@ -1,6 +1,6 @@
 const tablelista = document.querySelector('tableListaDeseo tbody');
 document.addEventListener('DOMContentLoaded', function () {
-    
+    getListaDeseo();
 })
 function getListaDeseo() {
     const url = base_url + 'principal/listaDeseo';
@@ -9,7 +9,7 @@ function getListaDeseo() {
     http.send(JSON.stringify(listaDeseo));
     http.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(this.status);
+            console.log(this.responseText);
         }
     }
 }
