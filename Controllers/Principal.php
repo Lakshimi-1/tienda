@@ -79,13 +79,22 @@ class Principal extends Controller
         $this->views->getView('principal', "deseo", $data);
     }
     //obtener producto apartir de la lista de deseo
-    public function Listadeseo()
+    public function listaDeseo()
     {
         $datos = file_get_contents('php://input');
         $json = json_decode($datos, true);
+        $array = array();
         foreach ($json as $producto) {
-            $data = $this->model->getListaDeseo($producto['idProducto']);
+            $result = $this->model->getListaDeseo($producto['idProducto']);
+            $data['id'] = $result['id'];
+            $data['nombre'] = $result['nombre'];
+            $data['precio'] = $result['precio'];
+            $data['nombre'] = $result['nombre'];
+            $data['cantidad'] = $result['imagen'];
+            array_push($array, $data);
         }
+        echo json_encode($array);
+        die();
     }
 }
 
