@@ -78,7 +78,12 @@ class Principal extends Controller
         $data['title'] = 'Tu lista de deseo';
         $this->views->getView('principal', "deseo", $data);
     }
-
+    //obtener producto apartir de la lista de deseo
+    public function getListadeseo()
+    {
+        $datos = file_get_contents('php://input');
+        print_r($datos);
+    }
 }
 
 ?>
