@@ -93,7 +93,7 @@ class Principal extends Controller
             $data['cantidad'] = $result['imagen'];
             array_push($array, $data);
         }
-        echo json_encode($array);
+        echo json_encode($array, JSON_UNESCAPED_UNICODE);
         die();
     }
 }

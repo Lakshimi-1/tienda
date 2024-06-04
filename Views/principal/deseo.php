@@ -24,9 +24,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td></td>
-                            </tr>
+                            <button class="btn btn-danger" type="button"></button>
                         </tbody>
                     </table>
                 </div>

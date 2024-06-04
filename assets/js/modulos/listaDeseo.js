@@ -1,4 +1,4 @@
-const tablelista = document.querySelector('tableListaDeseo tbody');
+const tablelista = document.querySelector('#tableListaDeseo tbody');
 document.addEventListener('DOMContentLoaded', function () {
     getListaDeseo();
 })
@@ -9,7 +9,18 @@ function getListaDeseo() {
     http.send(JSON.stringify(listaDeseo));
     http.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText);
+            const res = JSON.parse(this.responseText);
+            let html = '';
+            res.forEach(producto => {
+                html += `<tr>
+                <td>${producto.imagen}</td>
+                <td>${producto.nombre}</td>
+                <td>${producto.precio}</td>
+                <td>${producto.cantidad}</td>
+                <td><button class="btn btn-danger" type="button">Eliminar</button></td>
+            </tr>`;
+            });
+            tablelista.innerHTML = html;
         }
     }
 }
