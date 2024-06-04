@@ -89,7 +89,7 @@ class Principal extends Controller
             $data['id'] = $result['id'];
             $data['nombre'] = $result['nombre'];
             $data['precio'] = $result['precio'];
-            $data['cantidad'] = $result['cantidad'];
+            $data['cantidad'] = $producto['cantidad'];
             $data['imagen'] = $result['imagen'];
             array_push($array, $data);
         }
