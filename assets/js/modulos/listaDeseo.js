@@ -17,10 +17,10 @@ function getListaDeseo() {
                 <img class="img-thumbnail rounded-circle" src="${producto.imagen}" alt="" width="100">
                 </td>
                 <td>${producto.nombre}</td>
-                <td><span class="badge bg-info">${res.moneda + ' ' + producto.precio}</span></td>
-                <td>${producto.cantidad}</td>
+                <td><span class="badge bg-warning">${res.moneda + ' ' + producto.precio}</span></td>
+                <td><span class="badge bg-primary">${producto.cantidad}</span></td>
                 <td><button class="btn btn-danger btnEliminarDeseo" type="button" prod="${producto.id}"><i class="fas fa-trash"></i></button>
-                <button class="btn btn-info" type="button"><i class="fas fa-cart-plus"></i></button></td>
+                <button class="btn btn-primary" type="button"><i class="fas fa-cart-plus"></i></button></td>
             </tr>`;
             });
             tablelista.innerHTML = html;
