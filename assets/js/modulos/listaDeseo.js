@@ -11,13 +11,13 @@ function getListaDeseo() {
         if (this.readyState == 4 && this.status == 200) {
             const res = JSON.parse(this.responseText);
             let html = '';
-            res.forEach(producto => {
+            res.productos.forEach(producto => {
                 html += `<tr>
                 <td>
                 <img class="img-thumbnail rounded-circle" src="${producto.imagen}" alt="" width="100">
                 </td>
                 <td>${producto.nombre}</td>
-                <td><span class="badge bg-info">${producto.precio}</span></td>
+                <td><span class="badge bg-info">${res.moneda + ' ' + producto.precio}</span></td>
                 <td>${producto.cantidad}</td>
                 <td><button class="btn btn-danger btnEliminarDeseo" type="button" prod="${producto.id}"><i class="fas fa-trash"></i></button>
                 <button class="btn btn-info" type="button"><i class="fas fa-cart-plus"></i></button></td>
