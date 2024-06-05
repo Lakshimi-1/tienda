@@ -13,8 +13,8 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-body">
-                    <table class="table table-borderer" id="tableListaDeseo">
+                <div class="card-body shadow-lg">
+                    <table class="table table-borderer table-striped table-hover" id="tableListaDeseo" style="width: 100%;">
                         <thead class="thead-light">
                             <tr>
                                 <th>#</th>
