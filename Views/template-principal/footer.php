@@ -34,7 +34,7 @@
             </div>
             <div class="modal-footer">
                 <h3 id="totalGeneral"></h3>
-                <button class="btn btn-outline-primary" href="<?php echo BASE_URL . 'clientes'; ?>">Procesar Pedido</button>
+                <a class="btn btn-outline-primary" href="<?php echo BASE_URL . 'clientes'; ?>">Procesar Pedido</a>
             </div>
 
         </div>
