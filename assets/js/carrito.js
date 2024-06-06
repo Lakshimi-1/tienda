@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (localStorage.getItem("listaDeseo") != null) {
     listaDeseo = JSON.parse(localStorage.getItem("listaDeseo"));
   }
+  if (localStorage.getItem("listaCarrito") != null) {
+    listaCarrito = JSON.parse(localStorage.getItem("listaCarrito"));
+  }
   for (let i = 0; i < btnAddDeseo.length; i++) {
     btnAddDeseo[i].addEventListener("click", function () {
       let idProducto = btnAddDeseo[i].getAttribute("prod");
