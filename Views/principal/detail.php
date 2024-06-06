@@ -129,9 +129,9 @@
                             <p><?php echo $data['producto']['descripcion']; ?></p>
 
                             <form action="" method="GET">
-                                <input type="hidden" name="product-title" value="Activewear">
+                                <input type="hidden" id="idProducto" value="<?php echo $data['producto']['id']; ?>">
                                 <div class="row">
-                                    <div class="col-auto">
+                                    <!-- <div class="col-auto">
                                         <ul class="list-inline pb-3">
                                             <li class="list-inline-item">Size :
                                                 <input type="hidden" name="product-size" id="product-size" value="S">
@@ -141,7 +141,7 @@
                                             <li class="list-inline-item"><span class="btn btn-success btn-size">L</span></li>
                                             <li class="list-inline-item"><span class="btn btn-success btn-size">XL</span></li>
                                         </ul>
-                                    </div>
+                                    </div> -->
                                     <div class="col-auto">
                                         <ul class="list-inline pb-3">
                                             <li class="list-inline-item text-right">
@@ -159,7 +159,7 @@
                                         <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy">Comprar</button>
                                     </div>
                                     <div class="col d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard">Añadir</button>
+                                        <button type="button" class="btn btn-success btn-lg" id="btnAddCart" >Añadir</button>
                                     </div>
                                 </div>
                             </form>
@@ -228,6 +228,8 @@
     <!-- End Article -->
 
     <?php include_once 'Views/template-principal/footer.php';?>
+
+    <script src="<?php echo BASE_URL; ?>assets/js/modulos/detail.js"></script>
 
     <!-- Start Slider Script -->
     <script src="<?php echo BASE_URL; ?>assets/js/slick.min.js"></script>

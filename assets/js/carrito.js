@@ -2,6 +2,7 @@ const btnAddDeseo = document.querySelectorAll(".btnAddDeseo");
 const btnAddcarrito = document.querySelectorAll(".btnAddcarrito");
 const btnDeseo = document.querySelector("#btnCantidadDeseo");
 const btnCarrito = document.querySelector("#btnCantidadCarrito");
+const verCarrito = document.querySelector('#verCarrito');
 let listaDeseo, listaCarrito;
 document.addEventListener("DOMContentLoaded", function () {
   if (localStorage.getItem("listaDeseo") != null) {
