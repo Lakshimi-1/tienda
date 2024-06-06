@@ -25,6 +25,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   cantidadDeseo();
   cantidadCarrito();
+  
+  //ver carrito
+  const myModal = new bootstrap.Modal(document.getElementById('myModal'))
+  verCarrito.addEventListener('click', function () {
+    myModal.show();
+  })
 });
 //agregar productos a la lista de deseos
 function agregarDeseo(idProducto) {
