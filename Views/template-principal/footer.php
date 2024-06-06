@@ -30,6 +30,10 @@
                     </tbody>
                 </table>
             </div>
+            <div class="modal-footer">
+                <h3 id="totalGeneral"></h3>
+            </div>
+            
         </div>
     </div>
 </div>

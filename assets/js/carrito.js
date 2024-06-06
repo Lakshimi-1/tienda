@@ -3,7 +3,7 @@ const btnAddcarrito = document.querySelectorAll(".btnAddcarrito");
 const btnDeseo = document.querySelector("#btnCantidadDeseo");
 const btnCarrito = document.querySelector("#btnCantidadCarrito");
 const verCarrito = document.querySelector('#verCarrito');
-const tablelistaCarrito = document.querySelector('#tablelistaCarrito tbody');
+const tablelistaCarrito = document.querySelector('#tableListaCarrito tbody');
 let listaDeseo, listaCarrito;
 document.addEventListener("DOMContentLoaded", function () {
   if (localStorage.getItem("listaDeseo") != null) {
@@ -131,11 +131,14 @@ function getListaCarrito() {
               <td>${producto.nombre}</td>
               <td><span class="badge bg-warning">${res.moneda + ' ' + producto.precio}</span></td>
               <td><span class="badge bg-primary">${producto.cantidad}</span></td>
-              <td><button class="btn btn-danger btnEliminarDeseo" type="button" prod="${producto.id}"><i class="fas fa-trash"></i></button>
-              <button class="btn btn-primary" type="button"><i class="fas fa-cart-plus"></i></button></td>
+              <td>${producto.subTotal}</td>
+              <td>
+              <button class="btn btn-danger" type="button"><i class="fas fa-times-circle"></i></button>
+              </td>
           </tr>`;
           });
-          tableListaCarrito.innerHTML = html;
+          tablelistaCarrito.innerHTML = html;
+          document.querySelector('#totalGeneral').textContent = res.total;
           //btnEliminarDeseo();
       }
   }
