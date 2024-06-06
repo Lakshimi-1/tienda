@@ -56,6 +56,7 @@
                                 <label for="claveLogin"><i class="fas fa-key"></i> Contraseña</label>
                                 <input id="claveLogin" class="form-control" type="text" name="claveLogin" placeholder="Contraseña">
                             </div>
+                            <a href="#" id="btnRegistrarse">Todavia no tiene la cuenta?</a>
                         </div>
                         <!-- formulario de registro -->
                         <div class="col-md-12 d-none">
@@ -71,14 +72,16 @@
                                 <label for="claveRegistro"><i class="fas fa-key"></i> Contraseña</label>
                                 <input id="claveRegistro" class="form-control" type="text" name="claveRegistro" placeholder="Contraseña">
                             </div>
+                            
                         </div>
+                    </div>
+                    <div class="float-end">
+                        <button class="btn btn-primary" type="button">Login</button>
+                        <button class="btn btn-danger" type="button">Registrarse</button>
                     </div>
                 </form>
             </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary" type="button">Login</button>
-                <button class="btn btn-danger" type="button">Registrarse</button>
-            </div>
+
         </div>
     </div>
 </div>
