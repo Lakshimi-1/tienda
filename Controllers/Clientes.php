@@ -17,6 +17,13 @@ class Clientes extends Controller
             $correo = $_POST['correo'];
             $clave = $_POST['clave'];
             $data = $this->model->registroDirecto($nombre, $nombre, $clave);
+            if ($data > 0) {
+                $mensaje = array('msg' => 'registrado con exito', 'icono' => 'success');
+            }else {
+                $mensaje = array('msg' => 'error al registrarse', 'icono' => 'error');
+            }
+            echo json_encode($mensaje, JSON_UNESCAPED_UNICODE);
+            die();
         }
     }
 }
