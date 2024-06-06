@@ -133,13 +133,37 @@ function getListaCarrito() {
               <td><span class="badge bg-primary">${producto.cantidad}</span></td>
               <td>${producto.subTotal}</td>
               <td>
-              <button class="btn btn-danger" type="button"><i class="fas fa-times-circle"></i></button>
+              <button class="btn btn-danger btnDeletecart" type="button" prod="${producto.id}"><i class="fas fa-times-circle"></i></button>
               </td>
           </tr>`;
           });
           tablelistaCarrito.innerHTML = html;
           document.querySelector('#totalGeneral').textContent = res.total;
-          //btnEliminarDeseo();
+          btnEliminarCarrito();
       }
   }
+}
+function btnEliminarCarrito() {
+  let listaEliminar = document.querySelectorAll('.btnDeletecart');
+  for (let i = 0; i < listaEliminar.length; i++) {
+      listaEliminar[i].addEventListener('click', function () {
+          let idProducto = listaEliminar[i].getAttribute('prod');
+          eliminarListaCarrito(idProducto);
+      })
+  }
+}
+function eliminarListaCarrito(idProducto) {
+  for (let i = 0; i < listaCarrito.length; i++) {
+      if (listaCarrito[i]['idProducto'] == idProducto) {
+        listaCarrito.splice(i, 1);
+      }
+  }
+  localStorage.setItem('listaCarrito', JSON.stringify(listaCarrito));
+  getListaCarrito();
+  cantidadCarrito();
+  Swal.fire({
+      title: "Aviso?",
+      text: "PRODUCTO ELIMINADO DEL CARRITO",
+      icon: "success"
+    });
 }
