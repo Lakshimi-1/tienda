@@ -2,6 +2,7 @@ const tablelista = document.querySelector('#tableListaDeseo tbody');
 document.addEventListener('DOMContentLoaded', function () {
     getListaDeseo();
 })
+
 function getListaDeseo() {
     const url = base_url + 'principal/listaDeseo';
     const http = new XMLHttpRequest();
@@ -20,14 +21,15 @@ function getListaDeseo() {
                 <td><span class="badge bg-warning">${res.moneda + ' ' + producto.precio}</span></td>
                 <td><span class="badge bg-primary">${producto.cantidad}</span></td>
                 <td><button class="btn btn-danger btnEliminarDeseo" type="button" prod="${producto.id}"><i class="fas fa-trash"></i></button>
-                <button class="btn btn-primary" type="button"><i class="fas fa-cart-plus"></i></button></td>
+                <button class="btn btn-primary btnAddcart" type="button" prod="${producto.id}"><i class="fas fa-cart-plus"></i></button></td>
             </tr>`;
             });
             tablelista.innerHTML = html;
-            btnEliminarDeseo();
+            btnAgregarProducto();
         }
     }
 }
+
 function btnEliminarDeseo() {
     let listaEliminar = document.querySelectorAll('.btnEliminarDeseo');
     for (let i = 0; i < listaEliminar.length; i++) {
@@ -37,6 +39,7 @@ function btnEliminarDeseo() {
         })
     }
 }
+
 function eliminarListaDeseo(idProducto) {
     for (let i = 0; i < listaDeseo.length; i++) {
         if (listaDeseo[i]['idProducto'] == idProducto) {
@@ -51,4 +54,15 @@ function eliminarListaDeseo(idProducto) {
         text: "PRODUCTO ELIMINADO DE TU LISTA DE DESEOS",
         icon: "success"
       });
+}
+
+//agregar productos desde la lista de deseos
+function btnAgregarProducto() {
+    let listaAgregar = document.querySelectorAll('.btnAddcart');
+    for (let i = 0; i < listaAgregar.length; i++) {
+        listaEliminar[i].addEventListener('click', function () {
+            let idProducto = listaAgregar[i].getAttribute('prod');
+            eliminarListaDeseo(idProducto);
+        })
+    }
 }
