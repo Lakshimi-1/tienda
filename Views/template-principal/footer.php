@@ -56,13 +56,16 @@
                                 <label for="claveLogin"><i class="fas fa-key"></i> Contraseña</label>
                                 <input id="claveLogin" class="form-control" type="text" name="claveLogin" placeholder="Contraseña">
                             </div>
-                            <a href="#" id="btnRegistrarse">Todavia no tiene la cuenta?</a>
+                            <a href="#" id="btnRegister">Todavia no tienes una cuenta?</a>
+                            <div class="float-end">
+                                <button class="btn btn-primary btn-lg" type="button">Login</button>
+                            </div>
                         </div>
                         <!-- formulario de registro -->
-                        <div class="col-md-12 d-none">
+                        <div class="col-md-12 d-none" id="frmRegister">
                             <div class="form-group mb-3">
                                 <label for="nombreRegistro"><i class="fas fa-list"></i> Nombre</label>
-                                <input id="nombreRegistro" class="form-control" type="text" name="nombreRegistro" placeholder="correo Electronico">
+                                <input id="nombreRegistro" class="form-control" type="text" name="nombreRegistro" placeholder="Nombre Completo">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="correoRegistro"><i class="fas fa-envelope"></i> Correo</label>
@@ -72,12 +75,11 @@
                                 <label for="claveRegistro"><i class="fas fa-key"></i> Contraseña</label>
                                 <input id="claveRegistro" class="form-control" type="text" name="claveRegistro" placeholder="Contraseña">
                             </div>
-                            
+                            <a href="#" id="btnLogin">Ya tienes una cuenta?</a>
+                            <div class="float-end">
+                                <button class="btn btn-danger btn-lg" type="button" id="registrarse">Registrarse</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="float-end">
-                        <button class="btn btn-primary" type="button">Login</button>
-                        <button class="btn btn-danger" type="button">Registrarse</button>
                     </div>
                 </form>
             </div>
@@ -192,4 +194,5 @@
     const base_url = '<?php echo BASE_URL ?>';
 </script>
 <script src="<?php echo BASE_URL; ?>assets/js/carrito.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/js/login.js"></script>
 <!-- End Script -->
