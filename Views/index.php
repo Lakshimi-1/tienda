@@ -16,10 +16,10 @@
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left align-self-center">
-                                <h1 class="h1 text-success"><b>Sylveon</b> eCommerce</h1>
-                                <h3 class="h2">Tiny and Perfect eCommerce Template</h3>
+                                <h1 class="h1 text-success"><b>Afrodita</b> eCommerce</h1>
+                                <h3 class="h2">Comercio electrónico pequeño y perfecto</h3>
                                 <p>
-                                    Sylveon is an eCommerce 
+                                    Afrodita 
                                 </p>
                             </div>
                         </div>
@@ -75,8 +75,7 @@
             <div class="col-lg-6 m-auto">
                 <h1 class="h1">Categorias</h1>
                 <p>
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+                    Todas las categorias que tenemos en existencia
                 </p>
             </div>
         </div>
@@ -99,8 +98,7 @@
                 <div class="col-lg-6 m-auto">
                     <h1 class="h1">Productos</h1>
                     <p>
-                        Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident.
+                        Diseñados especificamente para disfrutar de este verano.
                     </p>
                 </div>
             </div>
