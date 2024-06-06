@@ -25,6 +25,7 @@ function getListaDeseo() {
             </tr>`;
             });
             tablelista.innerHTML = html;
+            btnEliminarDeseo();
             btnAgregarProducto();
         }
     }
