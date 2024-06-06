@@ -48,22 +48,22 @@
                     <div class="col-md-6">
                         <ul class="list-inline shop-top-menu pb-3 pt-1">
                             <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none mr-3" href="#">All</a>
+                                <a class="h3 text-dark text-decoration-none mr-3" href="#">Todo</a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none mr-3" href="#">Men's</a>
+                                <a class="h3 text-dark text-decoration-none mr-3" href="#">Niñas</a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="h3 text-dark text-decoration-none" href="#">Women's</a>
+                                <a class="h3 text-dark text-decoration-none" href="#">Mujeres</a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-md-6 pb-4">
                         <div class="d-flex">
                             <select class="form-control">
-                                <option>Featured</option>
-                                <option>A to Z</option>
-                                <option>Item</option>
+                                <option>Presentado</option>
+                                <option>De la A a la Z</option>
+                                <option>Artículo</option>
                             </select>
                         </div>
                     </div>
