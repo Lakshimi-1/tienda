@@ -14,19 +14,21 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body shadow-lg">
-                    <table class="table table-borderer table-striped table-hover" id="tableListaDeseo" style="width: 100%;">
-                        <thead class="thead-light">
-                            <tr>
-                                <th>#</th>
-                                <th>Producto</th>
-                                <th>Precio</th>
-                                <th>Cantidad</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-borderer table-striped table-hover align-middle" id="tableListaDeseo" style="width: 100%;">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Producto</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
