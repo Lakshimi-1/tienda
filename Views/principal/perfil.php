@@ -15,7 +15,6 @@
                                     <th>Precio</th>
                                     <th>Cantidad</th>
                                     <th>SubTotal</th>
-                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -23,6 +22,8 @@
                         </table>
                     </div>
                 </div>
+                <div class="card-footer"></div>
+                <h3 id="totalProducto"></h3>
             </div>
         </div>
         <div class="col-md-4">
