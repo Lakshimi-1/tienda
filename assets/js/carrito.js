@@ -3,6 +3,7 @@ const btnAddcarrito = document.querySelectorAll(".btnAddcarrito");
 const btnDeseo = document.querySelector("#btnCantidadDeseo");
 const btnCarrito = document.querySelector("#btnCantidadCarrito");
 const verCarrito = document.querySelector('#verCarrito');
+const tablelistaCarrito = document.querySelector('#tablelistaCarrito tbody');
 let listaDeseo, listaCarrito;
 document.addEventListener("DOMContentLoaded", function () {
   if (localStorage.getItem("listaDeseo") != null) {
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //ver carrito
   const myModal = new bootstrap.Modal(document.getElementById('myModal'))
   verCarrito.addEventListener('click', function () {
+    getListaCarrito();
     myModal.show();
   })
 });
@@ -108,5 +110,33 @@ function cantidadCarrito() {
     btnCarrito.textContent = listas.length;
   } else {
     btnCarrito.textContent = 0;
+  }
+}
+
+//ver carrito
+function getListaCarrito() {
+  const url = base_url + 'principal/listaCarrito';
+  const http = new XMLHttpRequest();
+  http.open('POST', url, true);
+  http.send(JSON.stringify(listaCarrito));
+  http.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+          const res = JSON.parse(this.responseText);
+          let html = '';
+          res.productos.forEach(producto => {
+              html += `<tr>
+              <td>
+              <img class="img-thumbnail rounded-circle" src="${producto.imagen}" alt="" width="100">
+              </td>
+              <td>${producto.nombre}</td>
+              <td><span class="badge bg-warning">${res.moneda + ' ' + producto.precio}</span></td>
+              <td><span class="badge bg-primary">${producto.cantidad}</span></td>
+              <td><button class="btn btn-danger btnEliminarDeseo" type="button" prod="${producto.id}"><i class="fas fa-trash"></i></button>
+              <button class="btn btn-primary" type="button"><i class="fas fa-cart-plus"></i></button></td>
+          </tr>`;
+          });
+          tableListaCarrito.innerHTML = html;
+          //btnEliminarDeseo();
+      }
   }
 }
