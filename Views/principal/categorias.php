@@ -7,7 +7,7 @@
     <div class="container py-5">
         <div class="row">
 
-            <div class="col-lg-3">
+            <!-- <div class="col-lg-3">
                 <h1 class="h2 pb-4">Categories</h1>
                 <ul class="list-unstyled templatemo-accordion">
                     <li class="pb-3">
@@ -42,9 +42,9 @@
                         </ul>
                     </li>
                 </ul>
-            </div>
+            </div> -->
 
-            <div class="col-lg-9">
+            <div class="col-lg-12">
                 <div class="row">
                     <div class="col-md-6">
                         <ul class="list-inline shop-top-menu pb-3 pt-1">
@@ -65,7 +65,7 @@
                 </div>
                 <div class="row">
                     <?php foreach ($data['productos'] as $producto) { ?>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="<?php echo $producto['imagen']; ?>">
@@ -73,7 +73,7 @@
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="#"><i class="fas fa-heart"></i></a></li>
                                         <li><a class="btn btn-success text-white mt-2" href="<?php echo BASE_URL . 'principal/detail/' . $producto['id']; ?>"><i class="fas fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="#"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2 btnAddcarrito" href="#" prod="<?php echo $producto['id']; ?>"><i class="fas fa-cart-plus"></i></a></li>
                                     </ul>
                                 </div>
                             </div>

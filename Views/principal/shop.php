@@ -6,8 +6,8 @@
     <!-- Start Content -->
     <div class="container py-5">
         <div class="row">
-            <div class="col-lg-3">
-                <!-- <h1 class="h2 pb-4">Categories</h1>
+            <!-- <div class="col-lg-3">
+                <h1 class="h2 pb-4">Categories</h1>
                 <ul class="list-unstyled templatemo-accordion">
                     <li class="pb-3">
                         <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
@@ -40,10 +40,10 @@
                             <li><a class="text-decoration-none" href="#">Sunglass</a></li>
                         </ul>
                     </li>
-                </ul> -->
-            </div>
+                </ul>
+            </div> -->
 
-            <div class="col-lg-9">
+            <div class="col-lg-12">
                 <div class="row">
                     <div class="col-md-6">
                         <ul class="list-inline shop-top-menu pb-3 pt-1">
@@ -70,7 +70,7 @@
                 </div>
                 <div class="row">
                     <?php foreach ($data['productos'] as $producto) { ?>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="<?php echo $producto['imagen']; ?>">

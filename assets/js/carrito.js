@@ -63,7 +63,7 @@ function cantidadDeseo() {
 }
 
 //agregar productos al carrito
-function agregarCarrito(idProducto, cantidad) {
+function agregarCarrito(idProducto, cantidad){
   if (localStorage.getItem("listaCarrito") == null) {
     listaCarrito = [];
   } else {
