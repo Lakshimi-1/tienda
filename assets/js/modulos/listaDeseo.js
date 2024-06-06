@@ -62,7 +62,7 @@ function btnAgregarProducto() {
     for (let i = 0; i < listaAgregar.length; i++) {
         listaAgregar[i].addEventListener('click', function () {
             let idProducto = listaAgregar[i].getAttribute('prod');
-            agregarCarrito(idProducto, 1);
+            agregarCarrito(idProducto, 1, true);
         })
     }
 }
