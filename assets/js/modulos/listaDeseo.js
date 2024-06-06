@@ -60,9 +60,9 @@ function eliminarListaDeseo(idProducto) {
 function btnAgregarProducto() {
     let listaAgregar = document.querySelectorAll('.btnAddcart');
     for (let i = 0; i < listaAgregar.length; i++) {
-        listaEliminar[i].addEventListener('click', function () {
+        listaAgregar[i].addEventListener('click', function () {
             let idProducto = listaAgregar[i].getAttribute('prod');
-            eliminarListaDeseo(idProducto);
+            agregarCarrito(idProducto, 1);
         })
     }
 }
