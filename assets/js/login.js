@@ -28,8 +28,13 @@ document.addEventListener('DOMContentLoaded', function () {
         http.send(formData);
         http.onreadystatechange = function () {
           if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText);
-            //const res = JSON.parse(this.responseText);
+            const res = JSON.parse(this.responseText);
+            Swal.fire("Aviso?", res.msg, res.icono);
+            if (res.icono == 'success') {
+                setTimeout(() => {
+                    window.location.reload();
+                }, 2000);
+            }
           }
         };
     })

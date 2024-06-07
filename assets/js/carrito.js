@@ -165,8 +165,8 @@ function eliminarListaCarrito(idProducto) {
   getListaCarrito();
   cantidadCarrito();
   Swal.fire({
-      title: "Aviso?",
-      text: "PRODUCTO ELIMINADO DEL CARRITO",
-      icon: "success"
-    });
+    title: "Aviso?",
+    text: "PRODUCTO ELIMINADO DEL CARRITO",
+    icon: "success",
+  });
 }

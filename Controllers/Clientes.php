@@ -16,7 +16,8 @@ class Clientes extends Controller
             $nombre = $_POST['nombre'];
             $correo = $_POST['correo'];
             $clave = $_POST['clave'];
-            $data = $this->model->registroDirecto($nombre, $nombre, $clave);
+            $hash = password_hash($clave, PASSWORD_DEFAULT);
+            $data = $this->model->registroDirecto($nombre, $nombre, $hash);
             if ($data > 0) {
                 $mensaje = array('msg' => 'registrado con exito', 'icono' => 'success');
             }else {
