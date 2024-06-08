@@ -32,7 +32,7 @@
                 <div class="card-body text-center">
                     <img class="img-thumbnail rounded-circle" src="<?php echo BASE_URL . 'assets/img/logoPerla.png'; ?>" alt="" width="150">
                     <hr>
-                    <p>Juanin</p>
+                    <p>Usuario 1</p>
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
@@ -42,7 +42,7 @@
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,10 @@
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                    <input type="radio" name="pago" value="1">Tarjeta de credito<br>
+                                    <input type="radio" name="pago" value="2">Tarjeta de debito<br>
+                                    <input type="radio" name="pago" value="3">Oxxo<br>
+                                    <input type="radio" name="pago" value="4">Otro<br>
                                 </div>
                             </div>
                         </div>

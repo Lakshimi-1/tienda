@@ -6,8 +6,7 @@
         <div class="col-md-6 m-auto text-center">
             <h1 class="h1">Contacta con nosotras</h1>
             <p>
-                Proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet.
+               Envíanos un mensaje y haznos saber tu consulta! Estaremos encantadas de responder.
             </p>
         </div>
     </div>
