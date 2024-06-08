@@ -52,7 +52,7 @@
                                     Otros
                                 </button>
                             </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div id="collapseTwo" class="accordion-collapse collapse text-start" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <input type="radio" name="pago" value="1">Tarjeta de credito<br>
                                     <input type="radio" name="pago" value="2">Tarjeta de debito<br>
